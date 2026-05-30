@@ -448,8 +448,7 @@ Cursor *table_find(Table *table, uint32_t key) {
     if (get_node_type(root_node) == NODE_LEAF) {
         return leaf_node_find(table, root_page_num, key);
     } else {
-        printf("IMPLEMENT SEARCH INTERNAL NODE \n");
-        exit(EXIT_FAILURE);
+        return internal_node_find(table, root_page_num, key);
     }
 }
 
